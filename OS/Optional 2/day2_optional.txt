@@ -1,0 +1,39 @@
+#create a directory 'testdir'
+mkdir testdir
+
+#5 files in this directory
+touch testdir/file{1..5}
+
+#set 755 as permissions of the file in this directory
+chmod 755 testdir/file*
+
+#then list all the files with permissions
+stat -c "%n %a" testdir/file*
+
+#chnage the permissions to 644
+chmod 677 testdir/file*
+
+#list all the files with modified permissions
+stat -c "%n %a" testdir/file*
+
+#delete all the files
+rm -rf testdir/*
+
+######################################
+#Create a directory testdir
+mkdir testdir
+
+#Create 5 files under it with name as file1,file2...file5
+touch testdir/file{1..5}
+
+#In every file enter the content as 
+#file1 -> This is file1
+#.
+#.
+#file5 -> This is file5
+```
+for $i in $(ls testdir)
+do
+	echo "This is $i"
+done
+```

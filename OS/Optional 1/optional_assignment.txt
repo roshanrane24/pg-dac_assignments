@@ -1,0 +1,61 @@
+1.Create a directory sample
+`mkdir sample`
+
+2.Go inside  sample directory
+`cd sample`
+
+3.Create directory with your name
+`mkdir roshan`
+
+4.Check the list of directories here
+`ls`
+
+5.Go outside of current directory
+`cd ..`
+
+6.Create data1->data2->data3->data4 directory
+`mkdir -p data1/data2/dat3/data4`
+
+7.Go to data4
+`cd data1/data2/dat3/data4`
+
+8.Create data5 dir inside data3
+`mkdir ../data5`
+
+9.Create a.txt,b.txt file inside data1
+`touch ../../../a.txt`
+`touch ../../../b.txt`
+
+10.Create c.txt d.txt file inside data5
+`touch ../data5/a.txt`
+`touch ../data5/b.txt`
+
+11.Go to data5
+`cd ../data5`
+
+12.Copy d.txt to data4
+`cp d.txt ../data4`
+
+13.Move c.txt to data4
+`mv d.txt ../data4`
+
+14.Copy a.txt to data3
+`cp ../../../a.txt ../data4`
+
+15.Move b.txt to data4
+`mv ../../../b.txt ../data4`
+
+16.Go to data4
+`cd ../data4`
+
+17.Move a.txt to data2
+`mv a.txt ../../`
+
+18.Go to data1
+`cd ../../../`
+
+19.Copy data5 to data2
+`cp data2/data3/data5 data2`
+
+20.Move data4 to data5
+`mv data2/data3/data4 data2/data5`
