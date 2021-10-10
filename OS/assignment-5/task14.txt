@@ -1,0 +1,4 @@
+14. How to run the c program in bash
+
+To run a C program in bash, first compile the program using gcc command command &
+run the output binary file with `./` prefix eg. `./<filename>`.
