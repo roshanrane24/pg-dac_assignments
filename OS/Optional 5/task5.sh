@@ -6,20 +6,18 @@ read -p "process names (, seprated) = " procs
 
 IFS=","
 
-pids=()
-
 for i in $procs
 do
 	echo "Starting $i"
-	bash -c "$i & 2> /dev/null"
-	pids+=($!)
+	"$i" &>/dev/null & 
+
 done
 
-echo "Wait 5s"
-sleep 5
+echo "Wait 2s"
+sleep 2
 
-for i in ${pids[@]}
+for i in $1
 do
-	echo "Killing PID $i"
-	kill -9 $i
+	echo "Killing Process $i"
+	pkill -9 $i
 done
