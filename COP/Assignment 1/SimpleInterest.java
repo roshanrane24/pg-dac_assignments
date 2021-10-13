@@ -1,3 +1,5 @@
+// Q7. Write a java program to calculate simple interest, get the required inputs from command line ?
+
 class SimpleInterest {
     public static void main(String[] args) {
         int principle = Integer.parseInt(args[0]);
