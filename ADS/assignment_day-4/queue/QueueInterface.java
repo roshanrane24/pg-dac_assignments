@@ -1,0 +1,8 @@
+package queue;
+
+public interface QueueInterface {
+	public void addQ(int element);
+	public int deleteQ();
+	public boolean isEmpty();
+	public boolean isFull();
+}
