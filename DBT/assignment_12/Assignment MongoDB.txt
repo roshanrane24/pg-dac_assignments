@@ -1,0 +1,650 @@
+1. Download and install following software
+	https://www.mongodb.com/try/download/community
+	https://www.mongodb.com/products/compass
+
+2. Observe windows service "MongoDB" installed
+
+3. Observe following properties of windows services
+
+	"C:\Program Files\MongoDB\Server\4.0\bin\mongod.exe" --config "C:\Program Files\MongoDB\Server\4.0\bin\mongod.cfg" --service
+	
+4. Open mongod.cnfg and observe the content of configuration file. Locate port number which is specified in config file.
+
+5. Open command prompt and try connecting to mongo shell (CLI) using port number observed in step 4
+-------------------------->
+mongo --port 27017
+---------------------------<
+
+6. List available database in MongoDB server
+--------------------------->
+show dbs
+---------------------------<
+
+7. Switch to each database and observe list of collection in each database
+--------------------------->
+use admin
+	switched to db admin
+show collections
+	system.users
+	system.version
+
+use config
+	switched to db config
+show collections
+	system.sessions
+
+use local
+	switched to db local
+show collections
+	startup_log
+---------------------------<
+
+8. Switch to new database called as scott
+
+--------------------------->
+use scott
+---------------------------<
+
+9. Create a new collection in scott schema with following command
+
+	db.salgrade.insert({GRADE:2, LOSAL:1001, HISAL:2000, TAX:100});
+
+--------------------------->
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId("618250ac1fb979a8ba812c48") }
+}
+---------------------------<
+
+10. Add few more documents to same collection with following keyvalue pair
+
++-------+-------+-------+
+| GRADE | LOSAL | HISAL |
++-------+-------+-------+
+|     1 |   700 |  1200 |
+|     2 |  1201 |  1400 |
+|     3 |  1401 |  2000 |
+|     4 |  2001 |  3000 |
+|     5 |  3001 |  9999 |
++-------+-------+-------+
+	
+	Note: Use command db.salgrade.insertOne({GRADE:1, LOSAL:700, HISAL:1200})
+
+--------------------------->
+db.salgrade.insertOne({GRADE:1, LOSAL:700, HISAL:1200});
+db.salgrade.insertOne({GRADE:2, LOSAL:1201, HISAL:1400});
+db.salgrade.insertOne({GRADE:3, LOSAL:1401, HISAL:2000});
+db.salgrade.insertOne({GRADE:4, LOSAL:2001, HISAL:3000});
+db.salgrade.insertOne({GRADE:5, LOSAL:3001, HISAL:9999});
+---------------------------<
+
+11. List all the records in salgrade table.
+
+   db.salgrade.find();
+
+------------------------------------>
+
+[
+  {
+    _id: ObjectId("618250ac1fb979a8ba812c48"),
+    GRADE: 2,
+    LOSAL: 1001,
+    HISAL: 2000,
+    TAX: 100
+  },
+  {
+    _id: ObjectId("618251291fb979a8ba812c49"),
+    GRADE: 1,
+    LOSAL: 700,
+    HISAL: 1200
+  },
+  {
+    _id: ObjectId("618251451fb979a8ba812c4a"),
+    GRADE: 2,
+    LOSAL: 1201,
+    HISAL: 1400
+  },
+  {
+    _id: ObjectId("618251a61fb979a8ba812c4b"),
+    GRADE: 3,
+    LOSAL: 1401,
+    HISAL: 2000
+  },
+  {
+    _id: ObjectId("618251b41fb979a8ba812c4c"),
+    GRADE: 4,
+    LOSAL: 2001,
+    HISAL: 3000
+  },
+  {
+    _id: ObjectId("618251d11fb979a8ba812c4d"),
+    GRADE: 5,
+    LOSAL: 3001,
+    HISAL: 9999
+  }
+]
+
+------------------------<
+
+
+12. find the csv files emp.csv and dept.csv. Load data of these files in MongoDB using following command (fire them from command prompt. Provide the path of csv file in case you are not in same directory)
+
+mongoimport --db scott --collection dept --file dept.csv --headerline --type csv --drop
+
+--------------------------->
+2021-11-03T15:21:19.212+0530    connected to: mongodb://localhost/
+2021-11-03T15:21:19.212+0530    dropping: scott.dept
+2021-11-03T15:21:19.265+0530    54 document(s) imported successfully. 0 document(s) failed to import.
+---------------------------<
+
+mongoimport --db scott --collection dept --file emp.csv --headerline --type csv --drop
+--------------------------->
+2021-11-03T15:22:02.964+0530    connected to: mongodb://localhost/
+2021-11-03T15:22:02.966+0530    dropping: scott.emp
+2021-11-03T15:22:03.092+0530    95 document(s) imported successfully. 0 document(s) failed to import.
+---------------------------<
+
+13. Connect to MongoDB using CLI. Switch to scott database and list all collections.
+
+    show collections;
+
+--------------------------->
+show collections
+dept
+emp
+salgrade
+---------------------------<
+
+14. List the documents from each collection (emp,dept,salgrade) using find command.
+
+--------------------------->
+db.emp.find();
+db.dept.find();
+db.salgrade.find();
+---------------------------<
+
+15. Try following commands on collection
+
+RDBMS:
+	select * from emp;
+
+MongoDB:
+	db.emp.find();
+	db.emp.find().pretty();
+	db.emp.find().forEach(printjson);
+
+16. Observe the output of following command
+
+db.emp.help();
+--------------------------->
+shows all command related to collections
+---------------------------<
+
+db.emp.find().help();
+--------------------------->
+shows all command which can be used on find operations
+---------------------------<
+
+17. Observe the output of following command
+
+RDBMS: select count(*) from emp;
+
+MongoDB: 
+db.emp.find().count();
+--------------------------->
+95
+---------------------------<
+
+db.emp.count();
+--------------------------->
+95
+---------------------------
+db.emp.count({DEPTNO:10})
+--------------------------->
+0
+
+---
+db.emp.count({department_id: 10})
+1
+---------------------------<
+
+18.
+RDBMS:
+select * from emp where deptno=10;
+
+MongoDB:
+db.emp.find({DEPTNO:10});
+--------------------------->
+
+---------------------------<
+
+db.emp.find({DEPTNO : {$in : [10]}})
+--------------------------->
+
+---------------------------<
+db.emp.find({department_id:10});
+--------------------------->
+[
+  {
+    _id: ObjectId("57e965744cecfbd391489c97"),
+    employee_id: Long("200"),
+    first_name: 'Jennifer',
+    last_name: 'Whalen',
+    email: 'JWHALEN',
+    phone_number: '515.123.4444',
+    hire_date: ISODate("1987-09-16T18:30:00.000Z"),
+    job_id: 'AD_ASST',
+    salary: 4500,
+    manager_id: Long("101"),
+    department_id: Long("10")
+  }
+]
+---------------------------<
+
+db.emp.find({department_id : {$in : [10]}})
+--------------------------->
+[
+  {
+    _id: ObjectId("57e965744cecfbd391489c97"),
+    employee_id: Long("200"),
+    first_name: 'Jennifer',
+    last_name: 'Whalen',
+    email: 'JWHALEN',
+    phone_number: '515.123.4444',
+    hire_date: ISODate("1987-09-16T18:30:00.000Z"),
+    job_id: 'AD_ASST',
+    salary: 4500,
+    manager_id: Long("101"),
+    department_id: Long("10")
+  }
+]
+---------------------------<
+
+
+RDBMS:
+select * from emp
+where sal >= 1000;
+
+MongoDB:
+db.emp.find({SAL : {$gt : 1000}});
+--------------------------->
+
+---------------------------<
+
+db.emp.find({salary : {$gt : 1000}});
+--------------------------->
+[
+  {
+    _id: ObjectId("57e965744cecfbd391489c39"),
+    employee_id: Long("106"),
+    first_name: 'Valli',
+    last_name: 'Pataballa',
+    email: 'VPATABAL',
+    phone_number: '590.423.4560',
+    hire_date: ISODate("1998-02-04T18:30:00.000Z"),
+    job_id: 'IT_PROG',
+    salary: 4800,
+    manager_id: Long("103"),
+    department_id: Long("60")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c3a"),
+    employee_id: Long("107"),
+    first_name: 'Diana',
+    last_name: 'Lorentz',
+    email: 'DLORENTZ',
+    phone_number: '590.423.5567',
+    hire_date: ISODate("1999-02-06T18:30:00.000Z"),
+    job_id: 'IT_PROG',
+    salary: 4200,
+    manager_id: Long("103"),
+    department_id: Long("60")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c41"),
+    employee_id: Long("114"),
+    first_name: 'Den',
+    last_name: 'Raphaely',
+    email: 'DRAPHEAL',
+    phone_number: '515.127.4561',
+    hire_date: ISODate("1994-12-06T18:30:00.000Z"),
+    job_id: 'PU_MAN',
+    salary: 11100,
+    manager_id: Long("101"),
+    department_id: Long("30")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c42"),
+    employee_id: Long("115"),
+    first_name: 'Alexander',
+    last_name: 'Khoo',
+    email: 'AKHOO',
+    phone_number: '515.127.4562',
+    hire_date: ISODate("1995-05-17T18:30:00.000Z"),
+    job_id: 'PU_CLERK',
+    salary: 3200,
+    manager_id: Long("114"),
+    department_id: Long("30")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c43"),
+    employee_id: Long("116"),
+    first_name: 'Shelli',
+    last_name: 'Baida',
+    email: 'SBAIDA',
+    phone_number: '515.127.4563',
+    hire_date: ISODate("1997-12-23T18:30:00.000Z"),
+    job_id: 'PU_CLERK',
+    salary: 3000,
+    manager_id: Long("114"),
+    department_id: Long("30")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c44"),
+    employee_id: Long("117"),
+    first_name: 'Sigal',
+    last_name: 'Tobias',
+    email: 'STOBIAS',
+    phone_number: '515.127.4564',
+    hire_date: ISODate("1997-07-23T18:30:00.000Z"),
+    job_id: 'PU_CLERK',
+    salary: 2900,
+    manager_id: Long("114"),
+    department_id: Long("30")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c47"),
+    employee_id: Long("120"),
+    first_name: 'test',
+    last_name: 'Weiss',
+    email: 'MWEISS',
+    phone_number: '650.123.1234',
+    hire_date: ISODate("1996-07-17T18:30:00.000Z"),
+    job_id: 'ST_MAN',
+    salary: 8000,
+    manager_id: Long("101"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c48"),
+    employee_id: Long("121"),
+    first_name: 'test',
+    last_name: 'Fripp',
+    email: 'AFRIPP',
+    phone_number: '650.123.2234',
+    hire_date: ISODate("1997-04-09T18:30:00.000Z"),
+    job_id: 'ST_MAN',
+    salary: 8200,
+    manager_id: Long("101"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c49"),
+    employee_id: Long("122"),
+    first_name: 'test',
+    last_name: 'Kaufling',
+    email: 'PKAUFLIN',
+    phone_number: '650.123.3234',
+    hire_date: ISODate("1995-04-30T18:30:00.000Z"),
+    job_id: 'ST_MAN',
+    salary: 7900,
+    manager_id: Long("101"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c4a"),
+    employee_id: Long("123"),
+    first_name: 'test',
+    last_name: 'Vollman',
+    email: 'SVOLLMAN',
+    phone_number: '650.123.4234',
+    hire_date: ISODate("1997-10-09T18:30:00.000Z"),
+    job_id: 'ST_MAN',
+    salary: 6500,
+    manager_id: Long("101"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c4b"),
+    employee_id: Long("124"),
+    first_name: 'test',
+    last_name: 'Mourgos',
+    email: 'KMOURGOS',
+    phone_number: '650.123.5234',
+    hire_date: ISODate("1999-11-15T18:30:00.000Z"),
+    job_id: 'ST_MAN',
+    salary: 5800,
+    manager_id: Long("101"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c4c"),
+    employee_id: Long("125"),
+    first_name: 'test',
+    last_name: 'Nayer',
+    email: 'JNAYER',
+    phone_number: '650.124.1214',
+    hire_date: ISODate("1997-07-15T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 3200,
+    manager_id: Long("20"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c4d"),
+    employee_id: Long("126"),
+    first_name: 'test',
+    last_name: 'Mikkilineni',
+    email: 'IMIKKILI',
+    phone_number: '650.124.1224',
+    hire_date: ISODate("1998-09-27T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 2700,
+    manager_id: Long("120"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c4e"),
+    employee_id: Long("127"),
+    first_name: 'test',
+    last_name: 'Landry',
+    email: 'JLANDRY',
+    phone_number: '650.124.1334',
+    hire_date: ISODate("1999-01-13T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 2400,
+    manager_id: Long("120"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c4f"),
+    employee_id: Long("128"),
+    first_name: 'test',
+    last_name: 'Markle',
+    email: 'SMARKLE',
+    phone_number: '650.124.1434',
+    hire_date: ISODate("2000-03-07T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 2200,
+    manager_id: Long("120"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c50"),
+    employee_id: Long("129"),
+    first_name: 'test',
+    last_name: 'Bissot',
+    email: 'LBISSOT',
+    phone_number: '650.124.5234',
+    hire_date: ISODate("1997-08-19T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 3300,
+    manager_id: Long("121"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c51"),
+    employee_id: Long("130"),
+    first_name: 'test',
+    last_name: 'Atkinson',
+    email: 'MATKINSO',
+    phone_number: '650.124.6234',
+    hire_date: ISODate("1997-10-29T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 2800,
+    manager_id: Long("121"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c52"),
+    employee_id: Long("131"),
+    first_name: 'test',
+    last_name: 'Marlow',
+    email: 'JAMRLOW',
+    phone_number: '650.124.7234',
+    hire_date: ISODate("1997-02-15T18:30:00.000Z"),
+    job_id: 'ST_CLERK',
+    salary: 2500,
+    manager_id: Long("121"),
+    department_id: Long("50")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c36"),
+    employee_id: Long("103"),
+    first_name: 'Alexander',
+    last_name: 'Hunold',
+    email: 'AHUNOLD',
+    phone_number: '590.423.4567',
+    hire_date: ISODate("1990-01-02T18:30:00.000Z"),
+    job_id: 'IT_PROG',
+    salary: 9000,
+    manager_id: Long("102"),
+    department_id: Long("60")
+  },
+  {
+    _id: ObjectId("57e965744cecfbd391489c37"),
+    employee_id: Long("104"),
+    first_name: 'Bruce',
+    last_name: 'Ernst',
+    email: 'BERNST',
+    phone_number: '590.423.4568',
+    hire_date: ISODate("1991-05-20T18:30:00.000Z"),
+    job_id: 'IT_PROG',
+    salary: 6000,
+    manager_id: Long("103"),
+    department_id: Long("60")
+  }
+]
+Type "it" for more
+---------------------------<
+
+RDBMS:
+    select ename,job,deptno from emp
+MongoDB :
+    db.emp.find({},{_id:0,ENAME:1,JOB:1,DEPTNO:1})
+--------------------------->
+
+---------------------------<
+
+    db.emp.find({}, {_id: 0, first_name: 1, job_id: 1, department_id: 1})
+--------------------------->
+[
+  { first_name: 'Valli', job_id: 'IT_PROG', department_id: Long("60") },
+  { first_name: 'Diana', job_id: 'IT_PROG', department_id: Long("60") },
+  { first_name: 'Den', job_id: 'PU_MAN', department_id: Long("30") },
+  {
+    first_name: 'Alexander',
+    job_id: 'PU_CLERK',
+    department_id: Long("30")
+  },
+  {
+    first_name: 'Shelli',
+    job_id: 'PU_CLERK',
+    department_id: Long("30")
+  },
+  {
+    first_name: 'Sigal',
+    job_id: 'PU_CLERK',
+    department_id: Long("30")
+  },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  {
+    first_name: 'Alexander',
+    job_id: 'IT_PROG',
+    department_id: Long("60")
+  },
+  { first_name: 'Bruce', job_id: 'IT_PROG', department_id: Long("60") }
+]
+Type "it" for more
+scott> db.emp.find({}, {_id: 0, first_name: 1, job_id: 1, department_id: 1})
+[
+  { first_name: 'Valli', job_id: 'IT_PROG', department_id: Long("60") },
+  { first_name: 'Diana', job_id: 'IT_PROG', department_id: Long("60") },
+  { first_name: 'Den', job_id: 'PU_MAN', department_id: Long("30") },
+  {
+    first_name: 'Alexander',
+    job_id: 'PU_CLERK',
+    department_id: Long("30")
+  },
+  {
+    first_name: 'Shelli',
+    job_id: 'PU_CLERK',
+    department_id: Long("30")
+  },
+  {
+    first_name: 'Sigal',
+    job_id: 'PU_CLERK',
+    department_id: Long("30")
+  },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_MAN', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  { first_name: 'test', job_id: 'ST_CLERK', department_id: Long("50") },
+  {
+    first_name: 'Alexander',
+    job_id: 'IT_PROG',
+    department_id: Long("60")
+  },
+  { first_name: 'Bruce', job_id: 'IT_PROG', department_id: Long("60") }
+]
+Type "it" for more
+---------------------------<
+
+Note: db.emp.find({restriction},{projection});
+
+
+19. Open MySQL Workbench.
+	- Connect to a database.
+	- Locate any table in treeview on left side of Workbench.
+	- Right click on it and locate "Table Data Export Wizard"
+	- Use this wizard to export the data in JSON format
+	
+	- Try to use mongoimport utility from step 12 to import that JSON format data into a new database and collection.
+
+--------------------------->
+mongoimport --db scott --collection emp_mysql --file emp.json --headerline --type json --drop --jsonArray
+
+2021-11-06T21:14:14.255+0530    connected to: mongodb://localhost/
+2021-11-06T21:14:14.256+0530    dropping: scott.emp_mysql
+2021-11-06T21:14:14.287+0530    14 document(s) imported successfully. 0 document(s) failed to import.
+---------------------------<
