@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Assignment 2_html5 2</title>
+        <style>
+body {
+    background-color: #346ba0;
+    color: white;
+}
+section {
+    margin: 3%;
+}
+#branch {
+    width: 50%;
+}
+.sem, .cpi {
+    width: 10%;
+}
+#exp{
+    width: 12%;
+}
+        </style>
+    </head>
+    <body>
+        <section>
+            <form method="post">
+                <fieldset>
+                    <legend>Registration Details</legend>
+                    <table cellspacing="12">
+                        <tr>
+                            <td align="right">University :</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Institute :</td>
+                            <td><input type="text"></td>
+                        </tr>
+                        <tr>
+                            <td align="right">Branch :</td>
+                            <td>
+                                <select id="branch" name="branch">
+                                    <option selected>--select--</option>
+                                    <option>CS</option>
+                                    <option>ME</option>
+                                    <option>EE</option>
+                                    <option>EC</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Degree :</td>
+                            <td>
+                                <select name="degree">
+                                    <option selected>--select--</option>
+                                    <option>BE</option>
+                                    <option>BSc</option>
+                                    <option>ME</option>
+                                    <option>MSc</option>
+                                </select>
+                                <input type="radio" name="degree-rad"> Pursuing
+                                <input type="radio" name="degree-rad"> Completed
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Average CPI :</td>
+                            <td>
+                                <input type="number" class="cpi">
+                                Upto<input type="number" class="sem">Th Semester
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Experience :</td>
+                            <td>
+                                <input type="number" name="exp" id="exp" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">Your Websites Or Blog :</td>
+                            <td>
+                                <input type="url" value="http://">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </section>
+        <section>
+            <div align="center">
+                <img src="http://jorhatjudiciary.gov.in/icon/Previous-icon.png" height="20" width="20">
+                <span> Step 2</span>
+                <img src="http://jorhatjudiciary.gov.in/icon/Next-icon.png" height="20" width="20">
+            </div>
+        </section>
+    </body>
+</html>
