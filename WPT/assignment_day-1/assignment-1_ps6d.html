@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>Assignment 1_ps6d</title>
+    </head>
+    <body>
+        <div>
+            <h1>Internet Usage Survey</h1>
+            <p>
+                This survey is being conducted to help identify the Internet usage patterns oh our customers.<br>
+                Please take a few moments to complete and submit this short form, Thank tou for your cooperation.
+            </p>
+        </div>
+        <br>
+        <div>
+            <table width="100%">
+                    <td>
+                        What type of Internet connection do you have?<br>
+                        (Select One)
+                    </td>
+                    <td>
+                        <select name="toic" multiple size="4">
+                            <option>Dial-up</option>
+                            <option>DSL</option>
+                            <option>Hih Speed Cable</option>
+                            <option>Other</option>
+                        </select>
+                    </td>
+                <tr>
+                    <td>
+                        What type of computer do you use most at home?
+                    </td>
+                    <td>
+                        <input type="radio" name="toc">Desktop
+                        <input type="radio" name="toc">Laptop
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        How would you describe your main reason for using the Internet?
+                    </td>
+                    <td>
+                        <input type="radio" name="reason">To do work-related activities<br>
+                        <input type="radio" name="reason">To do school-related activities<br>
+                        <input type="radio" name="reason">For entertainment puroses<br>
+                        <input type="radio" name="reason">Other activities
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <fieldset>
+                            <legend>Types of sites visited</legend>
+                            <p>
+                                What type os websites do you access most often?<br>Check all that apply.
+                            </p>
+                            <p>
+                                <input type="radio" name="websites">Self Improvement<br>
+                                <input type="radio" name="websites">Enterainment<br>
+                                <input type="radio" name="websites">News and Sports<br>
+                                <input type="radio" name="websites">References<br>
+                                <input type="radio" name="websites">Email
+                            </p>
+                        </fieldset>
+                    </td>
+                    <td>
+                        <fieldset>
+                            <legend>Time spent using Internet</legend>
+                            <p>&nbsp;<br>during an average week, how long do you spend online?</p>
+                            <p>
+                                <input type="radio" name="time">0-3 Hours<br>
+                                <input type="radio" name="time">4-6 Hours<br>
+                                <input type="radio" name="time">7-10 Hours<br>
+                                <input type="radio" name="time">11-14 Hours<br>
+                                <input type="radio" name="time">15+ Hours<br>
+
+                            </p>
+                        </fieldset>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <p>
+                            Please comment on your opinions concerning Internet Privacy and safety.<br>
+                            <textarea name="opinion" rows="5" cols="77"></textarea>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>First Name: <input type="text"></td>
+                    <td>Last Name: <input type="text"></td>
+                </tr>
+                <tr>
+                    <td>Age: <input type="text" size="4"></td>
+                    <td>Zip Code: <input type="text" size="9"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Click to Submit">
+                        <input type="reset" value="Clear Form">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
