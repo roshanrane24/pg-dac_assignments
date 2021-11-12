@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 13</title>
+        <script>
+            function getGreeting(hrs) {
+                if (hrs >= 6 && hrs < 12) {
+                    return "Good Morning";
+                } else if (hrs >= 12 && hrs < 16) {
+                    return "Good Afternoon";
+                } else {
+                    return "Good Evening";
+                }
+            }
+
+            function getDaysTillNewYear () {
+                var currentDate = new Date();
+                var lastDate = new Date(currentDate.getFullYear(), 11, 32);
+                return Math.floor((lastDate - currentDate) / 86400000);
+            }
+
+            days = ["Sunday",
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday"];
+
+            months = ["January",
+                      "February",
+                      "March",
+                      "April",
+                      "May",
+                      "June",
+                      "July",
+                      "August",
+                      "September",
+                      "October",
+                      "November",
+                      "December"];
+
+            var d = new Date();
+
+            var line1 = "Today is "
+                        + days[d.getDay()] + ", "
+                        + d.getDate() + " "
+                        + months[d.getMonth()] + " "
+                        + d.getFullYear() + ", "
+                        + "Welcome, and " + getGreeting(d.getHours())
+                        + " to You";
+            var line2 = "Number of days left till end of year : "
+                        + getDaysTillNewYear()
+
+            window.onload = () => {
+                document.getElementById("line1").innerHTML = line1;
+                document.getElementById("line2").innerHTML = line2;
+            }
+        </script>
+    </head>
+    <body>
+        <h5 id="line1"> </h5>
+        <h5 id="line2"> </h5>
+        <script></script>
+    </body>
+</html>

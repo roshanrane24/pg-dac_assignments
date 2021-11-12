@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 14</title>
+        <script>
+            function getWeekDays (day) {
+                days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+                return days[day];
+            }
+
+            window.onload = () => {
+                document.getElementById("days").onclick = () => {
+                    var inputDate = document.getElementById("date-input").value;
+                    if (inputDate === "") {
+                        alert("Please enter a date!");
+                        return;
+                    }
+
+                    var date = new Date(inputDate);
+                    alert(getWeekDays(date.getDay()));
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <input type="date" name="date-input" id="date-input"> <br>
+        <input type="button" value="Show Day" id="days">
+    </body>
+</html>

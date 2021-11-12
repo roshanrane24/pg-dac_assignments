@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 11</title>
+        <script>
+            function getFibo (n) {
+                if (n === 0) {
+                    return 0;
+                } else if (n === 1) {
+                    return 1;
+                } else {
+                    return getFibo(n - 1) + getFibo(n - 2);
+                }
+            }
+
+            function writeFibo (n) {
+                for (var i = 1; i <= n; i++) {
+                    document.write(getFibo(i) + "<br>");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var num = parseInt(prompt("Enter a number"));
+            writeFibo(num);
+        </script>
+    </body>
+</html>

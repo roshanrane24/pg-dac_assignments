@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 12</title>
+        <script>
+            function compundIntrest (p, r, n) {
+                return (p * Math.pow(1 + r / 100, n)) - p
+            }
+
+            var p = parseInt(prompt("Enter principle ammount"));
+            var r = parseFloat(prompt("Enter rate of interest"));
+            var n = parseInt(prompt("Enter period of interest"));
+            var ci = compundIntrest(p, r, n);
+        </script>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="3">
+                    <p>--------------------------------------------------</p>
+                    <p>***********Calculate Compound Interest************</p>
+                    <p>--------------------------------------------------</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Principle</td>
+                <td>-</td>
+                <td>
+                    <script>document.write(p + " ");</script>
+                </td>
+            </tr>
+            <tr>
+                <td>Rate of Interest</td>
+                <td>-</td>
+                <td>
+                    <script>document.write(r + "%");</script>
+                </td>
+            </tr>
+            <tr>
+                <td>Period</td>
+                <td>-</td>
+                <td>
+                    <script>document.write(n + " Years");</script>
+                </td>
+            </tr>
+            <tr>
+                <td>Compund Interest</td>
+                <td>-</td>
+                <td>
+                    <script>document.write(ci + " ");</script>
+                </td>
+            </tr>
+        </table>
+    </body>
+    
+</html>

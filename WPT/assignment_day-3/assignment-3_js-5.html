@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 5</title>
+        <script>
+            function findSum(a) {
+                var res = 0;
+
+                while (a != 0) {
+                    var d = a % 10;
+                    a = Math.floor(a / 10);
+                    res += d;
+                }
+
+                return res;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            var num = prompt("Enter a five digit number.");
+            document.write(findSum(num) + "<br>");
+        </script>
+    </body>
+</html>

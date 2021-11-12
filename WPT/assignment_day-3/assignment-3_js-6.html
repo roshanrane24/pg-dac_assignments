@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 6</title>
+        <script>
+            function min(){
+                var min = arguments[0];
+
+                for (var i = 0; i < arguments.length; i++) {
+                    if (arguments[i] < min) {
+                        min = arguments[i];
+                    }
+                }
+                return min;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write(min(21,43,41,67,6,513,132));
+        </script>
+    </body>
+</html>
