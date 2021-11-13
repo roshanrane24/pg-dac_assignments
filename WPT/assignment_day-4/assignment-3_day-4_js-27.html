@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_day 4_js 27</title>
+        <script>
+            var members = ["JOHN",
+                           "STEVE",
+                           "BEN",
+                           "DAMON",
+                           "ian"];
+
+            window.onload = () => {
+                document.getElementById("answer").innerHTML = members.map((member) => {return member.toUpperCase()}).join(",");
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Member of my Group are</h1>
+        <p id="answer"></p>
+    </body>
+</html>

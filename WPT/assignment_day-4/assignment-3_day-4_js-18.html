@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script></script>
+    <title>Assignment 3_js 15</title>
+    <script>
+      window.onload = () => {
+          document.getElementById("rev-button").onclick = function () {
+            document.getElementById("reverse").innerHTML = "";
+
+            var words = document.getElementById("words").value.split(",");
+
+            for (word of words) {
+              document.getElementById("reverse").innerHTML += word.split("").reverse().join("") + "<br>";
+            }
+          }
+          document.getElementById("reset").onclick = function () {
+            document.getElementById("reverse").innerHTML = "";
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="javascript:void(0)">
+      <div>
+        <p> Enter comma seprated words  : <input type="text" id="words" required> </p>
+        <input type="submit" id="rev-button" value="Reverse">
+        <input type="reset" id="reset" value="Reset">
+      </div>
+    </form>
+    <p id="reverse"> </p>
+  </body>
+</html>
+

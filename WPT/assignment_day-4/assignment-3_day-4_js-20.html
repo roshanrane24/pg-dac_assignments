@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 3_js 5</title>
+        <script>
+            function findSum() {
+                var res = 0;
+
+                for (var i = 0; i < arguments.length; i++) {
+                    res += arguments[i];
+                }
+
+                return res;
+            }
+
+            function findAvg() {
+                return findSum(...arguments) / arguments.length;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+          var arr = [6, 9, 4, 2, 0];
+
+          document.write("<h1>Sum :" + findSum(...arr) + "</h1>");
+          document.write("<h1>Average :" + findAvg(...arr) + "</h1>");
+        </script>
+    </body>
+</html>
