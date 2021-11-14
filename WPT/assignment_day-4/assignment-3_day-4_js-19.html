@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script></script>
+    <title>Assignment 3_js 15</title>
+    <script>
+      EmployeeObj = {}
+
+      function Employee (id, name, sal) {
+        this.empid = id;
+        this.empName = name;
+        this.salary = sal;
+      }
+
+      Employee.prototype = EmployeeObj;
+
+      emps = [];
+      emps.push(new Employee(10, "Eren", 5000));
+      emps.push(new Employee(20, "Tanjiro", 2500));
+      emps.push(new Employee(30, "Lufy", 1010920800));
+      emps.push(new Employee(40, "Naruto", 500500));
+      emps.push(new Employee(50, "Loid", 10005));
+
+      window.onload = () => {
+        var tab = document.getElementById("table");
+
+        tab.style.width = "100%";
+        tab.style.borderCollapse = "collapse";
+
+        for (const emp of emps) {
+          const newRow = document.createElement("tr");
+
+          for (const prop in emp) {
+            const newData = document.createElement("td");
+            const content = document.createTextNode(emp[prop]);
+            newData.appendChild(content);
+            newRow.appendChild(newData);
+          }
+          tab.appendChild(newRow)
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <table id="table" Border="1">
+      <caption> <b> Employee Table </b> </caption>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Salary</th>
+      </tr>
+    </table>
+  </body>
+</html>
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_day 4_js 30</title>
+        <script>
+            var custs = [];
+
+            function validateCname() {
+                var cname = document.getElementById("cname");
+                var cnameErr = document.getElementById("cname-err");
+                cnameErr.innerHTML = "";
+
+                if (cname.value.length >= 6)
+                    return true;
+                cnameErr.innerHTML = "Cust name should  be at least 6 character long";
+                return false;
+            }
+
+            function validateDate() {
+                var bdate = new Date(document.getElementById("bdate").value);
+                var sdate = new Date(document.getElementById("sdate").value);
+                var bdateErr = document.getElementById("bdate-err");
+
+                bdateErr.innerHTML = "";
+
+                if (bdate.getTime() <= sdate.getTime())
+                    return true;
+
+                bdateErr.innerHTML = "Billing Date cannot be greater than shipping date";
+                return false;
+
+            }
+
+            function inserData(elem) {
+                var cust = custs[custs.length - 1];
+                var tab = document.createElement("table");
+                tab.border = "1";
+                tab.style.borderCollapse = "collapse";
+                tab.style.width = "50%";
+
+                for (const prop in cust) {
+                    var row = document.createElement("tr");
+                    var key = document.createElement("td");
+                    var value = document.createElement("td");
+
+                    key.innerHTML = prop;
+                    value.innerHTML = cust[prop];
+
+                    row.appendChild(key);
+                    row.appendChild(value);
+
+                    tab.appendChild(row);
+                }
+                elem.appendChild(tab);
+                elem.appendChild(document.createElement("br"));
+            }
+
+
+            function popupData() {
+                var obj = {
+                    "oid": document.getElementById("oid").value,
+                    "cname": document.getElementById("cname").value,
+                    "bdate": document.getElementById("bdate").value,
+                    "sdate": document.getElementById("sdate").value,
+                    "ototal": document.getElementById("ototal").value
+                }
+
+                custs.push(obj);
+
+                var popupWin = window.open("", "Order Details");
+
+                inserData(popupWin.document.getElementsByTagName("body")[0]);
+            }
+
+            function validateForm() {
+                if (validateCname() && validateDate()){
+                    popupData();
+                    return true;
+                }
+                return false;
+            }
+
+            window.onload = () => {
+                document.getElementById("form").onsubmit = () => {
+                    return validateForm();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form id="form" action="#">
+            <p>
+                Order Id:
+                <input type="text"
+                       id="oid"
+                       required>
+
+            </p>
+            <p>
+                Cust Name:
+                <input type="text"
+                       id="cname"
+                       required>
+                <span id="cname-err"></span>
+            </p>
+            <p>
+                Enter Billing date:
+                <input type="date"
+                       id="bdate"
+                       required>
+                <span id="bdate-err"></span>
+            </p>
+            <p>
+                Enter Shipping date:
+                <input type="date"
+                       id="sdate"
+                       required>
+            </p>
+            <p>
+                Order Total:
+                <input type="text"
+                       id="ototal"
+                       required>
+            </p>
+            <p>
+                <input type="submit" value="Display">
+            </p>
+        </form>
+        <p id="answer"></p>
+    </body>
+</html>

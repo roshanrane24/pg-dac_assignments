@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <script>
+      class Rectangle {
+        constructor (width, height) {
+          this.width = width;
+          this.height = height;
+        }
+
+        getArea () {
+          return this.width * this.height;
+        }
+
+        getPerimeter () {
+          return 2 * (this.width + this.height);
+        }
+      }
+
+      class Circle {
+        constructor (radius) {
+          this.radius = radius;
+        }
+
+        getArea () {
+          return Math.round(Math.PI * Math.pow(this.radius, 2), 2);
+        }
+
+        getPerimeter () {
+          return Math.round(2 * Math.PI * this.radius, 2);
+        }
+      }
+
+
+      window.onload = () => {
+          document.getElementById("rect-button").onclick = function () {
+            var rect = new Rectangle(
+              document.getElementById("rect-width").value,
+              document.getElementById("rect-height").value
+            );
+
+            document.getElementById("rect-area").innerHTML = rect.getArea();
+            document.getElementById("rect-per").innerHTML = rect.getPerimeter();
+          }
+          document.getElementById("cir-button").onclick = function () {
+            var cir = new Circle(
+              document.getElementById("cir-radius").value
+            );
+
+            document.getElementById("cir-area").innerHTML = cir.getArea();
+            document.getElementById("cir-per").innerHTML = cir.getPerimeter();
+          }
+      }
+    </script>
+    <title>Assignment 3_js 15</title>
+  </head>
+  <body>
+    <form action="javascript:void(0)">
+      <h1>Rectangle</h1>
+      <div>
+        <p> Width  : <input type="text" id="rect-width" required> </p>
+        <p> Height : <input type="text" id="rect-height" required> </p>
+        <input type="submit" id="rect-button" value="Get Area & Perimeter">
+        <input type="reset" id="reset" value="Reset">
+        <p> Area : <span id="rect-area" class="name"></span> </p>
+        <p> Perimeter : <span id="rect-per" class="name"></span> </p>
+      </div>
+    </form>
+
+    <form action="javascript:void(0)">
+      <h1>Circle</h1>
+      <div>
+        <p> Radius  : <input type="text" id="cir-radius" required> </p>
+        <input type="submit" id="cir-button" value="Get Area & Perimeter">
+        <input type="reset" id="reset" value="Reset">
+        <p> Area : <span id="cir-area" class="name"></span> </p>
+        <p> Circumference : <span id="cir-per" class="name"></span> </p>
+        <p></p>
+      </div>
+    </form>
+  </body>
+</html>

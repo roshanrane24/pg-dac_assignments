@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_day 4_js 32</title>
+        <script>
+            onload = () => {
+                document.getElementById("btn").onclick = () => {
+                    var ssn = document.getElementById("ssn").value;
+
+                    if (/^\d{3}-\d{2}-\d{4}/.test(ssn)) {
+                        alert(ssn + " is a valid social security number")
+                    } else {
+                        alert(ssn + " is not a valid social security number")
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <p>Enter Your SSN : <input type="text" id="ssn"></p>
+            <input type="button" id="btn" value="Check">
+        </div>
+    </body>
+</html>

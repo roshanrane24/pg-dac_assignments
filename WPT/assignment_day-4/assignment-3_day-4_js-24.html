@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_js 24</title>
+        <script>
+            function displayTimeTable(start, end, times) {
+                var resultArea = document.getElementById("result-txt");
+                resultArea.value = "";
+
+                for (start; start <= end; start++) {
+                    resultArea.value += start + " time "
+                                        + times + " = "
+                                        + start * times + "\n";
+                }
+            }
+
+            window.onload = () => {
+                var startNum = document.getElementById("start-num");
+                var endNum = document.getElementById("end-num");
+                var mulNum = document.getElementById("mul-by");
+
+                startNum.style.width = "10%";
+                endNum.style.width = "10%";
+                mulNum.style.width = "10%";
+
+                var btn = document.getElementById("sub-btn");
+
+                btn.onclick = () => {
+                    displayTimeTable(parseInt(startNum.value),
+                                     parseInt(endNum.value),
+                                     parseInt(mulNum.value));
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="javascript:void(0)" method="post" accept-charset="utf-8">
+            <fieldset id="form-fs" class="form-fs">
+                <legend>Times Table</legend>
+                <div>
+                    <p align="center">
+                        Start Number: <input type="number" id="start-num">
+                        End Number: <input type="number" id="end-num">
+                        Multiply By: <input type="number" id="mul-by">
+                    </p>
+                    <p align="center">
+                        <input type="submit" value="Times Table" id="sub-btn">
+                    </p>
+                    <p align="center">
+                        <input type="Reset" value="Reset">
+                    </p>
+                </div>
+                <p align="center">
+                    <textarea name="result-txt" id="result-txt" cols="75" rows="8" ></textarea>
+                </p>
+            </fieldset>
+        </form>
+    </body>
+</html>
