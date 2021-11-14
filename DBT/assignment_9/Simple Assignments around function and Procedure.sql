@@ -127,9 +127,13 @@ END#
 */
 DELIMITER #
 DROP PROCEDURE IF EXISTS describe_grade_2#
-CREATE PROCEDURE describe_grade_2(
-)
+CREATE PROCEDURE describe_grade_2()
 BEGIN
+    CASE
+    WHEN 1 = 1 THEN
+        DESCRIBE SALGRADE;
+    ELSE BEGIN END;
+    END CASE; 
 END#
 
 /*

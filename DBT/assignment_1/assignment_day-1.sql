@@ -38,15 +38,26 @@ DESCRIBE SALGRADE;
 
 -- 9. Export the table data in external file in MySQL
 
-SELECT * FROM EMP INTO OUTFILE "/var/lib/mysql/employee_table";
+SELECT *
+  FROM EMP
+  INTO OUTFILE "/var/lib/mysql/employee_table";
 
 -- 10. Show the data from each table in MySQL
 
-SELECT * FROM BONUS;
-SELECT * FROM DEPT;
-SELECT * FROM EMP;
-SELECT * FROM DUMMY;
-SELECT * FROM SALGRADE;
+SELECT *
+  FROM BONUS;
+
+SELECT *
+  FROM DEPT;
+
+SELECT *
+  FROM EMP;
+
+SELECT *
+  FROM DUMMY;
+
+SELECT *
+  FROM SALGRADE;
 
 -- 11. Interact with MySQL WorkBench Software
 -- 12. Clear the MySQL command prompt
@@ -64,7 +75,9 @@ SELECT NOW();
 
 -- 15. Fire command to assign the output to select command to variable in MySQL
 
-SELECT EMPNO INTO @empid FROM EMP WHERE ENAME = 'KING';
+SELECT EMPNO INTO @empid
+  FROM EMP
+ WHERE ENAME = 'KING';
 
 -- 16. Print the value stored in variable on the screen
 
