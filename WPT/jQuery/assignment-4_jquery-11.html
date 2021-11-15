@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 4_jquery 11</title>
+    </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            // Approach 1
+            /*
+            $("div").each((index, elem) => {
+                if (elem.className != "")
+                    elem.innerHTML = elem.id;
+            })*/
+
+            // Approach 2
+            var div = $("div:not(div:not([class]))");
+            div.text((i) => {return div[i].id});
+
+        });
+    </script>
+    <body>
+        <div id="div1" class="divclass"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+    </body>
+</html>

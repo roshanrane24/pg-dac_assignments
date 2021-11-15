@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 4_jquery 14</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            var persons = [];
+
+            // Validations
+            function validateData() {
+                if (validateName() && validateAge()) return true;
+                return false;
+            }
+
+            function validateName() {
+                let name = $("#pname");
+
+                let err = $("#pname-err");
+                err.css("color", "red");
+                err.text("");
+
+                if (name.val() == "") {
+                    err.text("Name field is mandatory");
+                    name.focus();
+                    name.select();
+                    return false;
+                } else if (!/\b([A-z]|\s|\.){1,20}\b/.test(name.val())) {
+                    err.text("Name should only contain alphabets & must not be more than 20 characters.");
+                    name.focus();
+                    name.select();
+                    return false
+                }
+
+                return true;
+            }
+
+            function validateAge() {
+                let age = $("page");
+
+                let err = $("#page-err");
+                err.css("color", "red");
+                err.text("");
+
+                if (age.val() == "") {
+                    err.text("Age field is mandatory");
+                    name.focus();
+                    name.select();
+                    return false;
+                }
+
+                return true;
+            }
+
+            function insertData() {
+                let person = {
+                    "name": ["Name", $("#pname").val()],
+                    "age": ["Age", $("#page").val()],
+                    "isEmployed": ["Is Employed", $("#pisemp")[0].checked]
+                }
+
+                persons.push(person);
+            }
+
+            displayAllPersons = () => {
+                let div = $("div#person-table");
+                let tab = document.createElement("table");
+                tab.border= "1";
+                $(tab).css({
+                    "border-collapse": "collapse",
+                    "width": "50%"
+                })
+
+                div.html("");
+
+                let hRow = document.createElement("tr");
+                for (const prop of Object.keys(persons[0])) {
+                    let rHead = document.createElement("th");
+                    rHead.innerText = persons[0][prop][0];
+                    hRow.appendChild(rHead);
+                }
+
+                tab.appendChild(hRow)
+
+                for (const person of persons) {
+                    let row = document.createElement("tr");
+
+                    for (const prop of Object.keys(person)) {
+                        let val = document.createElement("td");
+                        val.innerText = person[prop][1];
+                        row.appendChild(val)
+                    }
+
+                    tab.appendChild(row);
+                }
+
+                div.append(tab)
+            }
+
+            $(document).ready(() => {
+                // button event
+                $(":input#btn-add").click(() => {
+                    if (validateData()) insertData();
+                });
+
+                $(":input#btn-display").click(() => {displayAllPersons();});
+            });
+        </script>
+
+    </head>
+    <body>
+        <div align="center">
+            <form action="javascript:void(0)">
+                <table cellspacing="50">
+                    <tr>
+                        <td>Name </td>
+                        <td>: <input type="text" name="pname" id="pname"> </td>
+                        <td id="pname-err"></td>
+                    </tr>
+                    <tr>
+                        <td>Age</td>
+                        <td>: <input type="number" name="page" id="page" min="0" max="100"> </td>
+                        <td id="page-err"></td>
+                    </tr>
+                    <tr>
+                        <td>Employed</td>
+                        <td>: <input type="checkbox" name="pisemp" id="pisemp"> </td>
+                    </tr>
+                    <tr align="center">
+                        <td><input type="button" value="Add" id="btn-add"></td>
+                        <td><input type="button" value="Display" id="btn-display"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div id="person-table" align="center"></div>
+    </body>
+</html>

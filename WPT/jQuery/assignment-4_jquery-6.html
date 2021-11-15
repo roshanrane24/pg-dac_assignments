@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_day 4_js 29</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(() => {
+                $("form input").hide();
+            })
+        </script>
+    </head>
+    <body>
+        <form action="#" id="form">
+            <p id="error-am"></p>
+            <p id="error-tm"></p>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <h3>Enter Loan Information:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>1) Amount of the loan (any currency)</td>
+                    <td><input type="number" id="amount" required></td>
+                </tr>
+                <tr>
+                    <td>2) Annual percentage rate of interest</td>
+                    <td><input type="number" id="roi" required></td>
+                </tr>
+                <tr>
+                    <td>3) Repayment period in year</td>
+                    <td><input type="number"  id="period" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <h3><input type="submit" value="Compute"> Payment Information:</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>4) Your monthly payment will be</td>
+                    <td><input type="text" id="monthly-payment" readonly></td>
+                </tr>
+                <tr>
+                    <td>5) Your total payment will be</td>
+                    <td><input type="text" id="total-payment" readonly></td>
+                </tr>
+                <tr>
+                    <td>6) Your total interest payment will be</td>
+                    <td><input type="text" id="total-interest-payment" readonly></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

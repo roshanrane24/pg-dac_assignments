@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 4_jquery 12</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            var persons = ["John", "Steve", "Ben", "Damon", "Ian"];
+
+            $(document).ready(() => {
+                var list = $("ol#list");
+
+                persons.forEach((elem) => {
+                    var item = $(document.createTextNode(elem)).wrap("<li>");
+                    list.append(item[0].parentElement);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h3> Members of my Group are </h3>
+        <ol id="list">
+        </ol>
+    </body>
+</html>
