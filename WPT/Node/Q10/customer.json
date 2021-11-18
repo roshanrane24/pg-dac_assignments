@@ -1,0 +1,21 @@
+[
+    {
+        "name": "Jason Todd",
+        "address": "Home of Jason, On Street near Jason's Home",
+        "phoneNumber": 9123123852,
+        "creditRating": 2.5
+    },
+    {
+        "name": "Loid Forger",
+        "address": "Home of Forgers, On Street near Jason's Home, In East Country",
+        "phoneNumber": 9513574682,
+        "creditRating": 4.5
+    },
+    {
+        "name": "Linus Sebastian",
+        "address": "Somewhere in Canada",
+        "phoneNumber": 1679438520,
+        "creditRating": 4.1
+        
+    }
+]

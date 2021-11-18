@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #006f62;
+        }
+        header, section {
+            text-align: center;
+            padding: 1%;
+            margin: 1%;
+            border-radius: 25%;
+        }
+
+        header {
+            background-color: #117f72;
+            color: hotpink;
+        }
+
+        form {
+            background-color: #117f72;
+            color: hotpink;
+            padding: 1%;
+            margin: 1%;
+            border-radius: 25%;
+        }
+
+        input {
+            border: 1px solid #006f62;
+            padding: 1%;
+        }
+
+        input[type=submit] {
+            background-color: #003f00;
+            color: hotpink;
+            border-radius: 25%;
+        }
+
+        fieldset {
+            width: fit-content;
+            align-content: center;
+        }
+        div#result {
+            padding: 1%;
+            background-color: #117f72;
+            color: hotpink;
+            margin: 3%;
+            border-radius: 25%;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            let form = $("form");
+            let opdiv = $("div#result")
+            let xhr = new XMLHttpRequest();
+
+            form.submit(() => {
+                let len = $("input#length").val();
+                let bre = $("input#breadth").val();
+                let op = opdiv.children();
+
+                opdiv.fadeIn(500);
+                xhr.open("GET", `/answer?length=${len}&breadth=${bre}`);
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.status == 200 && xhr.readyState == 4) {
+                        let result = JSON.parse(xhr.responseText);
+                        console.log(xhr.responseText);
+
+                        op.fadeOut(100);
+
+                        op.html("");
+                        op.append($(document.createElement("h3")).text(`Area = ${result.area}`));
+                        op.append($(document.createElement("h3")).text(`Perimeter = ${result.perimeter}`));
+                        
+                        op.fadeIn(200);
+                    } else if (xhr.status == 200 && xhr.readyState == 3) {
+                        op.fadeOut(100);
+
+                        op.html("");
+                        op.append($(document.createElement("h3")).text("Fetching Result"));
+
+                        op.fadeIn(200);
+                    } else if (xhr.status == 400) {
+                        op.fadeOut(100);
+
+                        op.html("");
+                        op.append($(document.createElement("h3")).css("color", "red").text("ERROR"));
+                        
+                        op.fadeIn(200);
+                    }
+                };
+                xhr.send();
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Rectangle</h1>
+    </header>
+    <section>
+        <form action="javascript:void(0)" method="get">
+            <p><input type="number" name="length" id="length" placeholder="length"></p>
+            <p><input type="number" name="breadth" id="breadth" placeholder="breadth"></p>
+            <p><input type="submit" value="Calculate"></p>
+        </form>
+        <div id="result" hidden><div></div></div>
+    </section>
+</body>
+</html>

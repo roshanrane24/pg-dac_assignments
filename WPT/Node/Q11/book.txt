@@ -1,0 +1,1 @@
+[{"bookid":1,"name":"Dune","author":"Frank Herbert","price":15.99},{"bookid":2,"name":"The Republic","author":"Plato","price":9.99},{"bookid":3,"name":"1984","author":"George Orwell","price":9.99}]
