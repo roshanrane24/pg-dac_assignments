@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header, section {
+            text-align: center;
+        }
+
+        body {
+            background-color: darksalmon;
+        }
+        input {
+            padding: 1em;
+            margin: 1em;
+            background-color: lavender;
+        }
+
+        data-in {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Simple Interest</h1></header>
+    <section>
+        <form action="si" method="get">
+            <div id="data-in">
+                <p><input placeholder="Principle" type="number" name="principle"></p>
+                <p><input placeholder="Time" type="number" name="time"></p>
+                <p><input placeholder="Rate" type="number" name="rate"></p>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+</html>

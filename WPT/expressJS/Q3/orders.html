@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Assignment 3_day 4_js 30</title>
+        <style>
+            header {
+                text-align: center;
+            }
+            h1 {
+                background-color:rgb(143, 185, 57);
+            }
+            body {
+                text-align: center;
+                background-color: olivedrab;
+            }
+            input {
+                padding: 1ex;
+                background-color: rgb(94, 126, 31);
+                color: wheat;
+            }
+
+            div {
+                background-color: olivedrab;
+                margin: 2ex;
+
+            }
+        </style>
+    </head>
+    <body>
+        <header><h1>Orders</h1></header>
+        <div><form id="form" method="get" action="save">
+            <p>
+                Order Id:
+                <input type="text"
+                       name="oid"
+                       required>
+
+            </p>
+            <p>
+                Cust Name:
+                <input type="text"
+                       name="cname"
+                       required>
+                <span id="cname-err"></span>
+            </p>
+            <p>
+                Enter Billing date:
+                <input type="date"
+                       name="bdate"
+                       required>
+                <span id="bdate-err"></span>
+            </p>
+            <p>
+                Enter Shipping date:
+                <input type="date"
+                       name="sdate"
+                       required>
+            </p>
+            <p>
+                Order Total:
+                <input type="text"
+                       name="ototal"
+                       required>
+            </p>
+            <p>
+                <input type="submit" value="Display">
+            </p>
+        </form></div>
+        <p id="answer"></p>
+    </body>
+</html>

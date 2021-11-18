@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: thistle;
+        }
+        header {
+            text-align: center;
+        }
+        section {
+            margin-left: auto;
+            margin-right: auto;
+            width: 8em;
+        }
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            padding: 3ex;
+        }
+
+        tr>td:not(tr:first-child>td) {
+            background-color: tomato;
+        }
+    </style>
+    <script>
+        function removeTableElementsExceptFirst(table) {
+            for (const node of document.querySelectorAll("tr:not(tr:first-child"))
+                table.removeChild(node);
+        }
+
+
+        window.onload = () => {
+            let xhr = new XMLHttpRequest();
+
+            let field = document.querySelector("input#num");
+            let table = document.querySelector("table tbody");
+            
+            field.onblur = () => {
+                xhr.open("GET", `/table?num=${field.value}`);
+
+                removeTableElementsExceptFirst(table);
+
+                xhr.onreadystatechange = () => {
+                    if (xhr.status == 200 & xhr.readyState == 4) {
+                        removeTableElementsExceptFirst(table);
+
+                        for (const num of JSON.parse(xhr.responseText)) {
+                            let tr = document.createElement("tr")
+                            let td = document.createElement("td")
+
+                            td.innerHTML = num;
+                            tr.appendChild(td);
+                            
+                            table.appendChild(tr);
+                        }
+                    } else if (xhr.status== 200 && xhr.readyState == 3) {
+                        removeTableElementsExceptFirst(table);
+                        let tr = document.createElement("tr")
+                        let td = document.createElement("td")
+
+                        td.innerHTML = "Fetching Data...";
+                        tr.appendChild(td);
+                        
+                        table.appendChild(tr);
+                    } 
+                };
+
+                xhr.send();
+            };
+        };
+    </script>
+<body>
+</head>
+    <header>
+        <h1>Table</h1>
+    </header>
+    <section>
+        <table border="true">
+            <tr>
+                <td>
+                    <input type="number" name="num" id="num">
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+</html>
