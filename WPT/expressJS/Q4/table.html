@@ -21,15 +21,17 @@
             border-collapse: collapse;
             text-align: center;
             padding: 3ex;
+            width: 144%;
         }
 
-        tr>td:not(tr:first-child>td) {
+        tr {
             background-color: tomato;
         }
     </style>
     <script>
         function removeTableElementsExceptFirst(table) {
-            for (const node of document.querySelectorAll("tr:not(tr:first-child"))
+            console.log(table)
+            for (const node of document.querySelectorAll("tr:not(tr:first-child)"))
                 table.removeChild(node);
         }
 
@@ -38,28 +40,19 @@
             let xhr = new XMLHttpRequest();
 
             let field = document.querySelector("input#num");
-            let table = document.querySelector("table tbody");
+            let table = document.querySelector("table");
             
             field.onblur = () => {
                 xhr.open("GET", `/table?num=${field.value}`);
 
-                removeTableElementsExceptFirst(table);
+                table.innerHTML = "";
 
                 xhr.onreadystatechange = () => {
                     if (xhr.status == 200 & xhr.readyState == 4) {
-                        removeTableElementsExceptFirst(table);
-
-                        for (const num of JSON.parse(xhr.responseText)) {
-                            let tr = document.createElement("tr")
-                            let td = document.createElement("td")
-
-                            td.innerHTML = num;
-                            tr.appendChild(td);
-                            
-                            table.appendChild(tr);
-                        }
+                        table.innerHTML = "";
+                        table.innerHTML += xhr.responseText;
                     } else if (xhr.status== 200 && xhr.readyState == 3) {
-                        removeTableElementsExceptFirst(table);
+                        table.innerHTML = "";
                         let tr = document.createElement("tr")
                         let td = document.createElement("td")
 
@@ -80,13 +73,8 @@
         <h1>Table</h1>
     </header>
     <section>
-        <table border="true">
-            <tr>
-                <td>
-                    <input type="number" name="num" id="num">
-                </td>
-            </tr>
-        </table>
+        <p><input type="number" name="num" id="num"></p>
+        <table border="true"></table>
     </section>
 </body>
 </html>

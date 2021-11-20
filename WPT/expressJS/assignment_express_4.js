@@ -9,12 +9,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/table", (req, res) => {
-    let temp = [];
+    let tab = ""
     for (let i = 1; i <= 10; i++) {
-        temp.push(i * parseInt(req.query.num));
+        tab += `<tr><td>${i * req.query.num}</td></tr>`
     }
 
-    res.status(200).send(temp);
+
+    res.status(200).send(tab);
 });
 
 app.listen(8080, () =>  {
