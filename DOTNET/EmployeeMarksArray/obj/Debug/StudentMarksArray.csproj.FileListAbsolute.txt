@@ -1,0 +1,7 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\bin\Debug\EmployeeMarksArray.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\bin\Debug\EmployeeMarksArray.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\bin\Debug\EmployeeMarksArray.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\obj\Debug\StudentMarksArray.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\obj\Debug\StudentMarksArray.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\obj\Debug\EmployeeMarksArray.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeMarksArray\obj\Debug\EmployeeMarksArray.pdb

@@ -1,0 +1,18 @@
+package main.java.dao;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import main.java.pojos.Tutorial;
+
+public interface ITutorialDao {
+	// ------------------------------ Read ------------------------------
+	// Get tutorial by topic id
+	List<Tutorial> getTutorialsByTopicId(int topicId) throws SQLException;
+	// Get Tutorial by tutorial name
+	Tutorial getTutorialByTutorialName(String name) throws SQLException;
+	
+	// ----------------------------- Update -----------------------------
+	// Add a visit to tutorial
+	int visitATutorial(int tutorialId) throws SQLException;
+}

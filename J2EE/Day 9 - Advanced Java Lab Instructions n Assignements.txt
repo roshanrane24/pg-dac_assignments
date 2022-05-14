@@ -1,0 +1,33 @@
+# Day 9
+
+1. import day9_cms , as java project . Trace complete flow to revise JSP---JavaBean--DAO--POJO---DB layers
+2. import day9_hibernate , as existing maven project , to revise hibernate architecture in detail.
+3. If majority completes this revision , we will add new fresh assignment later.
+
+4. Optional assignment (after complete revision)
+    Create fresh project day9_lab, maven based. (You can copy it from day8_hibernate or create it from scratch)
+
+    4.1 As per the "layers in hibernate " diagram , add config xml file , create hibernate utils n test bootstrapping of hibernate framework.
+
+    4.2 Take a look at this table.
+        ```
+        create table books(
+            id int(5) primary key auto_increment,
+            title varchar(20) unique,
+            author varchar(20),
+            category varchar(20),
+            price double);
+        ```
+
+    NOTE :
+        In 1st version of the POJO, create Book POJO mapped to this DB table.
+        In 2nd version (after learning E-R), we will create a separate table for book category:
+            (category_id, name), with Category 1  ------ * Book (one-many)
+
+    4.3 Create IBookDao n hibernate based implementation class, to add the books to the bookstore.
+
+    4.4. Test it with the tester.
+ 
+
+COMPLETELY OPTIONAL !!!!!!!!!!!!
+    4.3 Take a look at CMS tables : Map them to POJOs , w/o E-R.

@@ -1,0 +1,8 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\bin\Debug\EmployeeCollection3.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\bin\Debug\EmployeeCollection3.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\bin\Debug\EmployeeCollection3.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\obj\Debug\EmployeeCollection3.csproj.AssemblyReference.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\obj\Debug\EmployeeCollection3.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\obj\Debug\EmployeeCollection3.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\obj\Debug\EmployeeCollection3.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeCollection3\obj\Debug\EmployeeCollection3.pdb

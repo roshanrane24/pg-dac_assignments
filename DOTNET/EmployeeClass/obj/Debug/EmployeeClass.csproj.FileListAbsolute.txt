@@ -1,0 +1,16 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\obj\Debug\EmployeeClass.csproj.AssemblyReference.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\obj\Debug\EmployeeClass.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\obj\Debug\EmployeeClass.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\bin\Debug\ConsoleApp1.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\bin\Debug\ConsoleApp1.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\bin\Debug\ConsoleApp1.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\obj\Debug\EmployeeClass.csproj.AssemblyReference.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\obj\Debug\EmployeeClass.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\obj\Debug\EmployeeClass.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\obj\Debug\ConsoleApp1.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\obj\Debug\ConsoleApp1.pdb

@@ -1,0 +1,16 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\obj\Debug\Exception.csproj.AssemblyReference.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\obj\Debug\Exception.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\obj\Debug\Exception.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\bin\Debug\Exception.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\bin\Debug\Exception.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\bin\Debug\Exception.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\obj\Debug\Exception.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\Exception\obj\Debug\Exception.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\bin\Debug\Exception.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\bin\Debug\Exception.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\bin\Debug\Exception.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\obj\Debug\Exception.csproj.AssemblyReference.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\obj\Debug\Exception.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\obj\Debug\Exception.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\obj\Debug\Exception.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\Exception\obj\Debug\Exception.pdb

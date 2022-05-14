@@ -1,0 +1,7 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\bin\Debug\StudentStructure.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\bin\Debug\StudentStructure.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\bin\Debug\StudentStructure.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\obj\Debug\StudentStructure.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\obj\Debug\StudentStructure.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\obj\Debug\StudentStructure.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\StudentStructure\obj\Debug\StudentStructure.pdb

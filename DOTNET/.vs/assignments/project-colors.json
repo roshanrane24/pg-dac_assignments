@@ -1,0 +1,76 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9ecbd6a9-6f81-47d4-b121-b2d182606655": {
+      "ProjectGuid": "9ecbd6a9-6f81-47d4-b121-b2d182606655",
+      "DisplayName": "EmployeeClass",
+      "ColorIndex": 0
+    },
+    "90170c40-72b2-4615-8e7d-d43b7deeb132": {
+      "ProjectGuid": "90170c40-72b2-4615-8e7d-d43b7deeb132",
+      "DisplayName": "EmployeeClass2",
+      "ColorIndex": 1
+    },
+    "5c057e6d-5a47-49bb-84e1-800950cc714e": {
+      "ProjectGuid": "5c057e6d-5a47-49bb-84e1-800950cc714e",
+      "DisplayName": "EmployeeInheritance",
+      "ColorIndex": 2
+    },
+    "7a29d5e3-baff-4ac7-955c-407ee9e96c7f": {
+      "ProjectGuid": "7a29d5e3-baff-4ac7-955c-407ee9e96c7f",
+      "DisplayName": "EmployeeInheritance2",
+      "ColorIndex": 3
+    },
+    "4a60f054-5866-4864-a856-4f786db494ce": {
+      "ProjectGuid": "4a60f054-5866-4864-a856-4f786db494ce",
+      "DisplayName": "EmployeeArray",
+      "ColorIndex": 4
+    },
+    "3ec1fc28-7127-470f-b809-bb65d51e34a2": {
+      "ProjectGuid": "3ec1fc28-7127-470f-b809-bb65d51e34a2",
+      "DisplayName": "StudentMarksArray",
+      "ColorIndex": 5
+    },
+    "9070c493-bc4a-4d2c-99e2-c43162d73347": {
+      "ProjectGuid": "9070c493-bc4a-4d2c-99e2-c43162d73347",
+      "DisplayName": "StudentStructure",
+      "ColorIndex": 6
+    },
+    "b9da2efc-8587-4fe9-bb60-59f1a515fc8b": {
+      "ProjectGuid": "b9da2efc-8587-4fe9-bb60-59f1a515fc8b",
+      "DisplayName": "EmployeeCollection1",
+      "ColorIndex": 7
+    },
+    "2026dec9-3438-42d0-b4ec-0a5fe2e58da3": {
+      "ProjectGuid": "2026dec9-3438-42d0-b4ec-0a5fe2e58da3",
+      "DisplayName": "EmployeeCollection2",
+      "ColorIndex": 8
+    },
+    "e33aca5b-5386-4f35-b6a1-abbc804f00bd": {
+      "ProjectGuid": "e33aca5b-5386-4f35-b6a1-abbc804f00bd",
+      "DisplayName": "EmployeeCollection3",
+      "ColorIndex": 9
+    },
+    "0d628f7b-50da-4b6f-9950-6bb7f56484bc": {
+      "ProjectGuid": "0d628f7b-50da-4b6f-9950-6bb7f56484bc",
+      "DisplayName": "Lambda",
+      "ColorIndex": 10
+    },
+    "f73b1244-a960-4974-ab70-9344a2eb8d85": {
+      "ProjectGuid": "f73b1244-a960-4974-ab70-9344a2eb8d85",
+      "DisplayName": "Exception",
+      "ColorIndex": 11
+    },
+    "49d44012-7824-4887-b6a6-e0f7fc039620": {
+      "ProjectGuid": "49d44012-7824-4887-b6a6-e0f7fc039620",
+      "DisplayName": "MVCAssignment",
+      "ColorIndex": 12
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 13
+}

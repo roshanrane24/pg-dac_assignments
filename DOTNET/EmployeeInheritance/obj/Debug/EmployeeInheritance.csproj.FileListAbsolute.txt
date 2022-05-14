@@ -1,0 +1,7 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\bin\Debug\EmployeeInheritance.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\bin\Debug\EmployeeInheritance.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\bin\Debug\EmployeeInheritance.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\obj\Debug\EmployeeInheritance.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\obj\Debug\EmployeeInheritance.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\obj\Debug\EmployeeInheritance.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeInheritance\obj\Debug\EmployeeInheritance.pdb

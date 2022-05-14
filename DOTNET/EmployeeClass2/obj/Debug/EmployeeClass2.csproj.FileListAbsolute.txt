@@ -1,0 +1,14 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\bin\Debug\EmployeeClass2.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\bin\Debug\EmployeeClass2.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\bin\Debug\EmployeeClass2.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\obj\Debug\EmployeeClass2.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\obj\Debug\EmployeeClass2.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\obj\Debug\EmployeeClass2.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass\EmployeeClass2\obj\Debug\EmployeeClass2.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\bin\Debug\EmployeeClass2.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\bin\Debug\EmployeeClass2.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\bin\Debug\EmployeeClass2.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\obj\Debug\EmployeeClass2.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\obj\Debug\EmployeeClass2.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\obj\Debug\EmployeeClass2.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeClass2\obj\Debug\EmployeeClass2.pdb

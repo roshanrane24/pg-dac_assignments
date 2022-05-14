@@ -1,0 +1,100 @@
+.news {
+  padding: 1ex;
+  margin: 1rem;
+  background-color: #282c34;
+  box-shadow: 3px 9px 15px 3px grey;
+  border-radius: 1rem;
+  border: 1px sold tomato;
+}
+
+.news-header {
+  min-height: 7vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 5vh;
+  justify-content: center;
+  font-size: calc(10px + 3vmin);
+  color: rgb(243, 235, 235);
+  text-shadow: 1px 1px 13px gainsboro;
+}
+
+.news-hr {
+  border: 1px solid rgb(243, 235, 235);
+  margin-bottom: 1vh;
+}
+
+.news-content {
+  background-color: #383c46;
+  padding: 3ex;
+  margin: 3ex 1ex 3ex 1ex;
+  display: flex;
+  border-radius: 1rem;
+  border: 1px solid rgb(104, 102, 102);
+  box-shadow: 3px 9px 15px 3px rgb(58, 56, 56);
+  color: antiquewhite;
+}
+
+
+.news-content-title {
+  text-align: center;
+  font-size: calc(1.5vh + 1.5vw);
+  margin: 0px;
+  padding: 3px;
+}
+
+.news-content-body {
+  padding: 3vmin;
+  text-align: justify;
+  font-size: calc(1vh + 1vw);
+  margin: 5px;
+  padding: 10px;
+}
+
+.news-content-image {
+  width: 25vw;
+  height: 25vw;
+}
+
+.news-content-image-container {
+  display: inline;
+  margin: auto;
+  vertical-align: middle;
+}
+
+@media only screen and (min-width: 800px) {
+  .news-container {
+    display: flex;
+    flex-direction: row;
+    margin: unset;
+    padding: unset;
+    width: 100%;
+  }
+  .news-content {
+    display: flex;
+    flex-direction: column;
+  }
+.news-content-title {
+  text-align: center;
+  font-size: calc(1.5vh + 1.5vw);
+  margin: 0px;
+  padding: 3px;
+}
+
+.news-content-body {
+  padding: 3vmin;
+  text-align: justify;
+  font-size: calc(1vh + 1vw);
+  margin: 5px;
+  padding: 10px;
+}
+  .news-content-image-container {
+    align-items: center;
+    margin: auto;
+  }
+  .news-content-image {
+    box-align: center;
+    width: 25vw;
+    height: 25vh;
+  }
+}

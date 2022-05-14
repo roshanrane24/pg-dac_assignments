@@ -1,0 +1,6 @@
+Day 8
+1. import day8_cms into your workspace. Revise the flow from JSP--JavaBean --DAO --DBUtils --POJO--DB , using context listener.
+
+2. After complete revision , we will try to complete admin flow, interactively.
+
+3. Confirm that hibernate dependencies are downloaded correctly n your maven project is created w/o any errors.

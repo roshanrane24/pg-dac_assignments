@@ -1,0 +1,76 @@
+﻿@model MVCAssignment.Models.User
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<h2>Details</h2>
+
+@if (!string.IsNullOrWhiteSpace(ViewBag.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @ViewBag.ErrorMessage
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+else
+{
+    <div>
+        <h4>Welcome @Html.DisplayFor(model => model.Name)</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Username)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Username)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PhoneNumber)
+            </dd>
+
+        </dl>
+    </div>
+
+    using (Html.BeginForm("Logout", "Users"))
+    { 
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 pr-5">
+                @Html.ActionLink("Edit", "Update", new { id = Model.Username }, new { @class = "btn  btn-primary" }) |
+                <input type="submit" value="Logout" class="btn btn-danger" />
+            </div>
+        </div>
+    }
+}

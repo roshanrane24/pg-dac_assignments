@@ -1,0 +1,12 @@
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\bin\Debug\EmployeeArray.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\bin\Debug\EmployeeArray.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\bin\Debug\EmployeeArray.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\bin\Debug\EmployeeClass2.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\bin\Debug\EmployeeClass2.pdb
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\bin\Debug\EmployeeClass2.exe.config
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\obj\Debug\EmployeeArray.csproj.AssemblyReference.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\obj\Debug\EmployeeArray.csproj.SuggestedBindingRedirects.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\obj\Debug\EmployeeArray.csproj.CoreCompileInputs.cache
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\obj\Debug\EmployeeArray.csproj.CopyComplete
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\obj\Debug\EmployeeArray.exe
+C:\Users\rosha\Desktop\DOTNET_ASSIGNMENTS\EmployeeArray\obj\Debug\EmployeeArray.pdb

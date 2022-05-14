@@ -1,0 +1,17 @@
+Day 7
+
+1. import day7.1 to revise basic JSP syntax including comments, scripting elements,
+    EL syntax n page directive. (refer ot readme_jsp)
+
+2. Test URL rewriting with n later w/o cookies. (refer to it's readme)
+
+3. Hands on
+    - Refer to "day7-data\day7_help"\JSP assignment.
+    - We have solve it using sendRedirect.
+    - Replace client pull by server pull (RD's forward) scenario.
+    - Test it.
+
+4.Refer to "day2-data\day2_help\case studies\topic-tutorials"
+    - We are going to start with "admin" role tomorrow.
+    - Complete DAO layer for it , for adding new tutorial.
+    - Think about the validation logic n keep it tested.

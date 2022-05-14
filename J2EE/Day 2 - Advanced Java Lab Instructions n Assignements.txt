@@ -1,0 +1,36 @@
+Java EE
+Day 2
+    
+    1. Confirm if web server (tomcat) is added to your Java EE workspace n is it running fine.
+
+    2. Create dynamic web project n add index.html , under <webapp> . Deploy web application n test it using multiple web browsers.
+
+    3. Complete pending work from Day1
+
+    4. Execute stored function .
+        Refer : day1-data\day1_help\jdbc help\sql\sql cmds.txt
+        Search for : update_account_fn
+        Add this stored function in DB.
+
+        4.1 Create new java project(NO web project!) .
+            Test this stored function , in layered manner.
+            Tester--DAO(using DBUtils) --POJO --DB
+
+    5. Continue with day1_lab project or copy it day2_lab(java project)
+        Keep Data access layer for the case study (Content Management system) ready , for customer role.
+        refer : day2-data\day2_help\case studies\ContentManagementSystem
+        MUST be done using layered architecture.
+
+        5.1 Display all available tutorial names , under selected topic , sorted as per visits , in desc order.
+            i/p : topic id
+            o/p : List<Tutorial>
+
+        5.2 Display selected  tutorial details by name
+            i/p : tutorial name 
+            o/p : tutorial details (Tutorial)
+
+        5.3 Update visits 
+            i/p tutorial id
+            o/p updated visit count or error mesg
+
+        Reading H.W : Go through "readme Java EE" till servlets (at least!!)

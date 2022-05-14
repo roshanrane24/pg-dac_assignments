@@ -1,0 +1,11 @@
+Java EE
+Day 4
+    1. import day4.1 project in your workspace , to revise cookie based session tracking.
+
+    2. import day4.2 project in your workspace , to revise HttpSession based session tracking.
+
+    3. import day4_cms project in your workspace , to revise continuation of a case study.
+
+    4. Continue with day4_cms or create your own. With the help of lab faculty , 
+        4.1 Refer to case study page flow n try to complete Tutorials Page (a servlet) 
+        4.2 Try to complete tutorial details page also.
